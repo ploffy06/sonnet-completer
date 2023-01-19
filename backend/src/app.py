@@ -5,7 +5,7 @@ from src.sonnet import sonnet
 
 app = Flask(__name__)
 
-@app.route('/sonnet/create', methods=["GET"])
+@app.route('/sonnet', methods=["GET"])
 def sonnet_create():
     """
     Returns a generated sonnet that starts with the given context

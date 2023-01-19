@@ -17,7 +17,9 @@ class Sonnet:
             ValueError: context length is larger than the block size defined for gpt model
         """
         if len(context) > block_size:
-            raise ValueError(f"context length can be max {block_size} characters")
+            msg = f"context length can be max {block_size} characters"
+            raise ValueError(msg)
+
         if len(context) == 0:
             data_input = torch.tensor([encode(context)], dtype=torch.long)
         else:
