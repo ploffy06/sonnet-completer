@@ -1,11 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import "../App.css"
 
 const Sonnet = ({sonnet}) => {
     return (
         <div className="Sonnet">
-            hi
-            {sonnet}
+            {
+                sonnet.split('\n')
+                .map(e => <p>{e}</p>)
+            }
         </div>
     )
 }

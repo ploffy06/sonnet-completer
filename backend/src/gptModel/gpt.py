@@ -51,14 +51,14 @@ class MultiHeadedAttention(nn.Module):
 
 class FeedForward(nn.Module):
     """
-    A simeple linear layer followed by a non-linearity
+    A simple linear layer followed by a non-linearity
     """
-    def __init__(self, n_embed):
+    def __init__(self, n_embd):
         super().__init__()
         self.net = nn.Sequential(
-            nn.Linear(n_embed, n_embed * 4),
+            nn.Linear(n_embd, n_embd * 4),
             nn.ReLU(),
-            nn.Linear(n_embed * 4, n_embed),
+            nn.Linear(n_embd * 4, n_embd),
             nn.Dropout(dropout)
         )
 
@@ -69,13 +69,13 @@ class Block(nn.Module):
     """
     Transformer block: communication followed by computation
     """
-    def __init__(self, n_embed, n_head):
+    def __init__(self, n_embd, n_head):
         super().__init__()
-        head_size = n_embed // n_head
+        head_size = n_embd // n_head
         self.sa = MultiHeadedAttention(n_head, head_size)
-        self.ffwd = FeedForward(n_embed)
-        self.ln1 = nn.LayerNorm(n_embed)
-        self.ln2 = nn.LayerNorm(n_embed)
+        self.ffwd = FeedForward(n_embd)
+        self.ln1 = nn.LayerNorm(n_embd)
+        self.ln2 = nn.LayerNorm(n_embd)
 
     def forward(self, x):
         # "fork" off, do some computation and come back
@@ -130,6 +130,7 @@ class GptModel(nn.Module):
         return idx
 
 gptModel = GptModel(vocab_size, n_embed)
-
+gptModel.load_state_dict(torch.load("src/gptModel/model_weights"))
+gptModel.eval()
 
 

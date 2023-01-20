@@ -1,5 +1,5 @@
 import torch
-from src.gptModel.hyperparams import block_size, encode, decode, device
+from src.gptModel.gpt import block_size, encode, decode, device
 from src.gptModel.gpt import gptModel
 
 class Sonnet:

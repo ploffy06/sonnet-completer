@@ -1,11 +1,12 @@
 import torch
 
-block_size = 64
+batch_size = 64
+block_size = 256 # max context length
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
-lr = 1e-3
-epochs = 500
+lr = 1e-3 # self attention can't tolerate high lr
+epochs = 1000
 eval_inters = 10
-n_embed = 96
+n_embed = 192
 n_head=6
 n_layer = 6
 dropout = 0.2

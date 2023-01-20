@@ -21,13 +21,14 @@ header {
   cursor: grab;
 }
 
-.About {
+.Blog {
   padding: 20px;
   font-size: 25px;
 }
 
-.PersonalInfo {
-  padding: 10px;
+.PersonalInfoContainer {
+  padding: 15px;
+  font-size: 20px;
 }
 
 .PersonalInfo:visited {
@@ -40,8 +41,8 @@ header {
 
 .Sonnet {
   text-align: center;
-  padding: 20px;
-  font-size: 35px;
+  padding: 5px;
+  font-size: 25px;
 }
 
 .Home > header {
@@ -51,12 +52,14 @@ header {
 
 .ContextForm {
   padding: 20px;
-  align-items: center;
+  text-align: center;
 }
 
 .ContextInput {
   padding: 10px;
   text-align: center;
   font-size: 30px;
+  width: 1000px;
   border: solid hsl(177, 48%, 35%) 3px;
+  border-radius: 20px;
 }
