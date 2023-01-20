@@ -12,7 +12,7 @@ const NavBar = () => {
 
     return (
         <div className="NavBar">
-            <header onClick={() => {setPath('/')}}>Home</header>
+            <header onClick={() => {setPath('/')}}>SonnetCompleter</header>
             <header onClick={() => {setPath('/about')}}>About</header>
         </div>
     )

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import NavBar from "../components/NavBar";
 import Sonnet from "../components/Sonnet";
-import { useContext } from "react";
+import "../App.css";
 
 const Home = () => {
     const [sonnet, setSonnet] = useState('');
@@ -28,17 +28,21 @@ const Home = () => {
         }
     }
     return (
-        <div >
+        <div className="Home">
             <div>
                 <NavBar />
             </div>
-            <form onSubmit={createSonnet}>
-                <input
-                    placeholder="Aa"
-                    type='text'
-                    onChange={(e) => setContext(e.target.value)}
-                />
-            </form>
+            <header>Start a sonnet</header>
+            <div className="ContextForm">
+                <form onSubmit={createSonnet}>
+                    <input
+                        placeholder="Aa"
+                        type='text'
+                        onChange={(e) => setContext(e.target.value)}
+                        className="ContextInput"
+                    />
+                </form>
+            </div>
             <div>
                 <Sonnet sonnet={sonnet} />
             </div>

@@ -5,6 +5,11 @@
   color:white
 }
 
+header {
+  font-size: 30px;
+  font-weight: bold;
+}
+
 .NavBar > header {
   padding: 20px;
   font-size: 20px;
@@ -14,4 +19,44 @@
 .NavBar > header:hover {
   background-color: hsl(177, 48%, 20%);
   cursor: grab;
+}
+
+.About {
+  padding: 20px;
+  font-size: 25px;
+}
+
+.PersonalInfo {
+  padding: 10px;
+}
+
+.PersonalInfo:visited {
+  color: inherit;
+}
+
+.PersonalInfo:hover {
+  color: rgb(234, 255, 253);
+}
+
+.Sonnet {
+  text-align: center;
+  padding: 20px;
+  font-size: 35px;
+}
+
+.Home > header {
+  padding: 20px;
+  text-align: center;
+}
+
+.ContextForm {
+  padding: 20px;
+  align-items: center;
+}
+
+.ContextInput {
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  border: solid hsl(177, 48%, 35%) 3px;
 }
