@@ -10,13 +10,7 @@ torch
 flask
 wsgiref
 ```
-1. On one terminal run the backend by typing in the following commands:
+To run the server
 ```
-cd backend
-flask run
-```
-2. On a separate terminal run the frontend by typing in the following commands:
-```
-cd frontend
-yarn start
+cd frontend && yarn start
 ```
