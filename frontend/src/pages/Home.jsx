@@ -37,6 +37,7 @@ const Home = () => {
             if (!response.ok) {
                 throw new Error(`Error has occurred: ${response.status}`);
             } else {
+                console.log(response)
                 response.json().then((sonnet) => {
                     setSonnet(sonnet.sonnet);
                     console.log(sonnet)
