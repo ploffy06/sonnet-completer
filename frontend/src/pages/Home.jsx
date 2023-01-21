@@ -41,6 +41,8 @@ const Home = () => {
                 response.json().then((sonnet) => {
                     setSonnet(sonnet.sonnet);
                     console.log(sonnet)
+                }).catch((error) => {
+                    console.log("Promise rejected");
                 })
             }
         } catch(e) {
