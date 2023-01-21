@@ -30,7 +30,7 @@ const Home = () => {
         })
 
         try {
-            const response = await fetch(`ploffy.alwaysdata.net/sonnet?context=${encodedValue}`, {
+            const response = await fetch(`http://ploffy.alwaysdata.net/sonnet?context=${encodedValue}`, {
                 method: 'GET',
             })
 
@@ -50,8 +50,8 @@ const Home = () => {
             console.log("Network error occurred");
         }
 
-        setInputDetails(defaultInputDetails)
         setContext('');
+        setInputDetails(defaultInputDetails)
     }
     return (
         <div className="Home">
