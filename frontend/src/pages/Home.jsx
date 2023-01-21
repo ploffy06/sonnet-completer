@@ -10,8 +10,8 @@ const Home = () => {
 
     const defaultInputDetails = {
         disabled: false,
-        bg: "linear-gradient(rgb(108, 68, 128), rgb(31, 29, 32))",
-        fc: "white"
+        bg: "white",
+        fc: "black"
     }
     const [inputDetails, setInputDetails] = useState(defaultInputDetails);
 
