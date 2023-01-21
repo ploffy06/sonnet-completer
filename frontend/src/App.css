@@ -1,13 +1,18 @@
 .NavBar {
-  background-color: hsl(177, 48%, 35%);
+  background: rgb(108, 68, 128);
   height: 60px;
   display: flex;
-  color:white
 }
 
 header {
   font-size: 30px;
   font-weight: bold;
+  padding-left: 10%;
+}
+
+p, h4 {
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .NavBar > header {
@@ -17,7 +22,7 @@ header {
 }
 
 .NavBar > header:hover {
-  background-color: hsl(177, 48%, 20%);
+  background: rgb(31, 29, 32);
   cursor: grab;
 }
 
@@ -36,7 +41,7 @@ header {
 }
 
 .PersonalInfo:hover {
-  color: rgb(234, 255, 253);
+  color: rgb(214, 131, 255);
 }
 
 .Sonnet {
@@ -60,6 +65,6 @@ header {
   text-align: center;
   font-size: 30px;
   width: 1000px;
-  border: solid hsl(177, 48%, 35%) 3px;
+  border: solid rgb(139, 91, 163) 3px;
   border-radius: 20px;
 }

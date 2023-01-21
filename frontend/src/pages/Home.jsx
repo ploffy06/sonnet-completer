@@ -10,8 +10,8 @@ const Home = () => {
 
     const defaultInputDetails = {
         disabled: false,
-        bg: "white",
-        fc: "black"
+        bg: "linear-gradient(rgb(108, 68, 128), rgb(31, 29, 32))",
+        fc: "white"
     }
     const [inputDetails, setInputDetails] = useState(defaultInputDetails);
 
@@ -67,7 +67,7 @@ const Home = () => {
                         disabled={inputDetails.disabled}
                         onChange={(e) => setContext(e.target.value)}
                         className="ContextInput"
-                        style={{backgroundColor: inputDetails.bg, color: inputDetails.fc}}
+                        style={{background: inputDetails.bg, color: inputDetails.fc}}
                     />
                 </form>
             </div>
