@@ -30,7 +30,7 @@ const Home = () => {
         })
 
         try {
-            const response = await fetch(`http://ploffy.alwaysdata.net/sonnet?context=${encodedValue}`, {
+            const response = await fetch(`ploffy.alwaysdata.net/sonnet?context=${encodedValue}`, {
                 method: 'GET',
             })
 
