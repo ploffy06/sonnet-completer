@@ -4,8 +4,17 @@ The sonnet completer simply takes in an input (or no input) and generates a sonn
 It does this through a petrained gpt model that was built using PyTorch (see `backend/src/gptModel`).
 
 ## Running locally
-To run
+1. on one terminal
 ```
 cd frontend
 yarn start
+```
+2. on another terminal
+```
+cd backend
+flask run
+```
+You may need to install some packages in the backend in which case, in the backend directory
+```
+pip install -r requirements. txt
 ```
